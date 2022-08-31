@@ -13,11 +13,21 @@ public class App {
         app.doSomething();
     }
 
+    public int updateValue() {
+        this.value += 1;
+        return this.value;
+    }
+
     public void doSomething() {
         if (true) {
             if (value > 8) {
                 if (value == 8) {
                     System.out.println("Hello World!! 8");
+                    this.updateValue();
+                    this.doSomething();
+                }
+                if (value > 20) {
+                    this.value = 7;
                 }
             }
         }
